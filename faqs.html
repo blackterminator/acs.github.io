@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <title>Cyco - Cyber Security Startups HTML Template</title>
-        <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="16x16">
+        <link rel="icon" href="assets/images/new logo4.png" type="image/png" sizes="16x16">
 
         <!-- bootstrap css -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all" />
@@ -92,8 +92,8 @@
             <div class="navbar-area sticky-black navbar-area-2">
                 <div class="mobile-nav">
                     <a href="index.html" class="mobile-brand">
-                        <img src="assets/images/logo-2.png" alt="logo" class="logo main-brand">
-                        <img src="assets/images/logo-2-dark.png" alt="logo" class="logo hover-brand">
+                        <img src="assets/images/new logo4.png" alt="logo" class="logo main-brand">
+                        <img src="assets/images/new logo4.png" alt="logo" class="logo hover-brand">
                     </a>
                     
                 </div>
@@ -101,8 +101,8 @@
                     <div class="container-fluid">
                         <nav class="navbar navbar-expand-md navbar-light">
                             <a class="navbar-brand" href="index.html">
-                                <img src="assets/images/logo-2.png" alt="logo" class="logo main-brand">
-                                <img src="assets/images/logo-2-dark.png" alt="logo" class="logo hover-brand">
+                                <img src="assets/images/new logo4.png" alt="logo" class="logo main-brand">
+                                <img src="assets/images/new logo4.png" alt="logo" class="logo hover-brand">
                             </a>
                             <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                                 <ul class="navbar-nav mx-auto">
@@ -284,7 +284,7 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1 pb-30">
                         <div class="contact-box">
-                            <form class="contact-form" id="contactForm">
+                            <form class="contact-form" id="contactForm" name="submit-to-google-sheet" >
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group mb-20">
@@ -312,7 +312,7 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group mb-20">
-                                            <textarea name="message" class="form-control" id="message" rows="6" placeholder="Your Question*"></textarea>
+                                            <textarea name="question" class="form-control" id="message" rows="6" placeholder="Your Question*"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -342,7 +342,7 @@
                         <div class="col-sm-12 col-md-6 col-lg-3">
                             <div class="footer-content-item">
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/images/logo-2.png" alt="logo"></a>
+                                    <a href="index.html"><img src="assets/images/new logo4.png" alt="logo"></a>
                                 </div>
                                 <div class="footer-details footer-details-light">
                                     <p>If you are unsure where to start, we can help you put in place an online security framework - training, procedures, and best practices that will build strong online defenses and help you comply with applicable laws and regulations.</p>
@@ -452,7 +452,7 @@
             <div class="side-modal">
                 <div class="side-modal-header">
                     <div class="side-modal-logo">
-                        <a href="index.html"><img src="assets/images/logo-dark.png" alt="logo"></a>
+                        <a href="index.html"><img src="assets/images/new logo4.png" alt="logo"></a>
                     </div>
                     <div class="side-modal-close">
                         <i class="bx bx-x"></i>
@@ -512,7 +512,17 @@
             </div>
         </div>
         <!-- .end search-overlay -->
-
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwacPTmj9BvzbH-WgBvvy6O9W_I7d2bbC7VcMCKUewFAjnjhWkCIyhNWUfHAfoTZBxv/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
 
         <!-- essential js -->
         <script src="assets/js/jquery-3.5.1.min.js"></script>
